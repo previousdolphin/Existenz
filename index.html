@@ -18,13 +18,19 @@
     <header class="site-header">
         <div class="container header-inner">
             <a href="#home" class="logo">EXISTENZ.</a>
+            <button class="menu-toggle" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
             <nav class="main-nav">
                 <a href="#home">Home</a>
                 <a href="#dashboard">Dashboard</a>
                 <a href="#docs">Documentation</a>
                 <a href="#terminal">Terminal</a>
+                <a href="#dashboard" class="btn btn-primary mobile-submit-btn">Submit Payload</a>
             </nav>
-            <a href="#dashboard" class="btn btn-primary nav-submit-btn">Submit Payload</a>
+            <a href="#dashboard" class="btn btn-primary nav-submit-btn d-none d-md-inline-flex">Submit Payload</a>
         </div>
     </header>
     <!-- HEADER END -->
@@ -162,7 +168,26 @@
                 </div>
             </section>
             
-            <section class="dashboard-content bg-white">
+            <section class="dashboard-stats-section bg-white reveal-section">
+                <div class="container">
+                    <div class="features-grid">
+                        <div class="feature-card bg-accent-3 text-center">
+                            <h3>Cycle Balance</h3>
+                            <p class="stat-text">1,450</p>
+                        </div>
+                        <div class="feature-card bg-primary text-center">
+                            <h3>Active Nodes</h3>
+                            <p class="stat-text">2</p>
+                        </div>
+                        <div class="feature-card bg-accent-2 text-center">
+                            <h3>Viral Mutants</h3>
+                            <p class="stat-text">14</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dashboard-content bg-white reveal-section">
                 <div class="container split-layout">
                     <div class="form-container">
                         <form class="deploy-form" onsubmit="event.preventDefault(); alert('Payload sealed and submitted to Incubation.');">
@@ -197,6 +222,11 @@
                                 <span>Status: GRADUATED to Public Grid</span>
                                 <span>Lifespan: 6 days remaining</span>
                             </li>
+                            <li class="bg-white padding-box">
+                                <strong>Fluid_Dynamics_Demo</strong>
+                                <span>Status: ARCHIVED (Meta Rotated)</span>
+                                <span>Lineage: Spawned 4 Mutants</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -212,25 +242,25 @@
                     <p class="large-text">The architecture, the API, and the rules of engagement.</p>
                 </div>
             </section>
-            <section class="docs-content">
+            <section class="docs-content reveal-section">
                 <div class="container">
                     <div class="docs-grid">
                         <aside class="docs-nav">
                             <ul>
-                                <li><a href="#docs">1. The Open Source Mandate</a></li>
-                                <li><a href="#docs">2. Submitting Payloads</a></li>
-                                <li><a href="#docs">3. Mutation Webhooks</a></li>
-                                <li><a href="#docs">4. Cycle Economy</a></li>
+                                <li><a href="#docs-mandate">1. Open Source Mandate</a></li>
+                                <li><a href="#docs-ttl">2. Submitting & TTL</a></li>
+                                <li><a href="#docs-webhooks">3. Mutation Webhooks</a></li>
+                                <li><a href="#docs-api">4. API Access</a></li>
                             </ul>
                         </aside>
                         <div class="docs-body">
-                            <h2>1. The Open Source Mandate</h2>
+                            <h2 id="docs-mandate">1. The Open Source Mandate</h2>
                             <p>To ensure total mutability, black-box servers are strictly forbidden. All logic must reside within the client-side payload you submit. We expect either a single-file `.html` payload containing all inline scripts, or unobfuscated `.js` files that our web-IDE can parse.</p>
                             
-                            <h2>2. Understanding TTL (Time to Live)</h2>
+                            <h2 id="docs-ttl">2. Understanding TTL (Time to Live)</h2>
                             <p>Every newly submitted app enters the database with a strict 48-hour TTL. You must secure 3 unique human nodes to vouch for its functionality within this window. If the timer reaches zero, the row is irrevocably dropped from the database. No exceptions.</p>
                             
-                            <h2>3. Mutation Webhooks (Beta)</h2>
+                            <h2 id="docs-webhooks">3. Mutation Webhooks (Beta)</h2>
                             <p>If you wish to track when other users fork and mutate your Genesis payload, you can register a webhook in your terminal settings. The payload will include the diff map and the new Incubation ID of the mutant variant.</p>
                             <pre class="code-block">
 {
@@ -240,6 +270,13 @@
   "timestamp": 1698745211,
   "diff_size_kb": 4.2
 }
+                            </pre>
+
+                            <h2 id="docs-api">4. API Access</h2>
+                            <p>To programmatically submit payloads or query the global lineage graph, authenticate requests using your network token. Never expose this token in client-side applications.</p>
+                            <pre class="code-block">
+Authorization: Bearer ex_sys_9982x_alpha_v3
+GET https://api.existenz.network/v1/lineage?node=app_982bX
                             </pre>
                         </div>
                     </div>
@@ -252,7 +289,18 @@
         <article id="page-terminal" class="page">
             <section class="terminal-section">
                 <div class="container">
-                    <div class="terminal-window">
+                    <div class="terminal-stats features-grid two-col reveal-section" style="margin-bottom: 2rem; max-width: 900px; margin-left: auto; margin-right: auto;">
+                        <div class="feature-card bg-accent-1 text-center" style="padding: 1rem;">
+                            <h4>Network Latency</h4>
+                            <p class="stat-text" style="font-size: clamp(1.5rem, 3vw, 2rem);">12ms</p>
+                        </div>
+                        <div class="feature-card bg-accent-3 text-center" style="padding: 1rem;">
+                            <h4>Global Uptime</h4>
+                            <p class="stat-text" style="font-size: clamp(1.5rem, 3vw, 2rem);">99.9%</p>
+                        </div>
+                    </div>
+
+                    <div class="terminal-window reveal-section">
                         <div class="terminal-header">
                             <span>existenz-core@sys:~</span>
                         </div>
@@ -266,9 +314,10 @@
                                 <p>[10:42:33] MUTATION DETECTED: payload_alpha -> mutant_gamma.</p>
                                 <p>[10:43:02] Node_99Y initiated 60-second iframe lock on mutant_gamma.</p>
                                 <p>[10:43:40] CYCLE TRANSFER: 33 Cycles awarded to Node_99Y (Bounty).</p>
+                                <p class="success">> INTERACTIVE MODE ENABLED. TYPE 'help' FOR COMMANDS.</p>
                             </div>
                             <div class="terminal-input-line">
-                                <span>$</span> <input type="text" class="terminal-input" placeholder="Enter command..." autofocus>
+                                <span>$</span> <input type="text" class="terminal-input" placeholder="Enter command..." autocomplete="off">
                             </div>
                         </div>
                     </div>
@@ -287,7 +336,7 @@
             </div>
             <div class="footer-links">
                 <a href="#docs">Documentation</a>
-                <a href="#docs">API Access</a>
+                <a href="#docs-api">API Access</a>
                 <a href="#terminal">System Status</a>
                 <a href="#terminal">Terminal</a>
             </div>

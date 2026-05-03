@@ -76,6 +76,12 @@ a {
     margin-bottom: 1rem;
 }
 
+/* DISPLAY HELPERS */
+.d-none { display: none; }
+@media (min-width: 768px) {
+    .d-md-inline-flex { display: inline-flex; }
+}
+
 /* SPA PAGE TOGGLING */
 .page {
     display: none;
@@ -150,6 +156,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .logo {
@@ -157,21 +164,83 @@ a {
     font-size: 1.5rem;
     font-weight: 800;
     letter-spacing: -1px;
+    z-index: 1002;
 }
 
+/* MOBILE MENU TOGGLE */
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1002;
+    padding: 0.5rem;
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 4px;
+    background-color: var(--text-dark);
+    transition: 0.3s;
+}
+
+@media (min-width: 768px) {
+    .menu-toggle { display: none; }
+}
+
+/* MAIN NAVIGATION */
 .main-nav {
     display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-white);
+    border-bottom: var(--border-width) solid var(--border-color);
+    padding: 2rem 5%;
+    gap: 1.5rem;
+}
+
+.main-nav.open {
+    display: flex;
+}
+
+.main-nav a {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-dark);
+}
+
+.main-nav a:last-child {
+    border-bottom: none;
+}
+
+.main-nav .btn {
+    border-bottom: var(--border-width) solid var(--border-color);
 }
 
 @media (min-width: 768px) {
     .main-nav {
         display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: static;
+        padding: 0;
+        border: none;
+        width: auto;
         gap: 2rem;
     }
     .main-nav a {
-        font-weight: 500;
-        text-transform: uppercase;
         font-size: 0.9rem;
+        font-weight: 500;
+        border-bottom: none;
+        padding: 0;
     }
     .main-nav a:hover,
     .main-nav a.active-link {
@@ -180,14 +249,8 @@ a {
         text-decoration-thickness: 2px;
         text-underline-offset: 4px;
     }
-}
-
-.nav-submit-btn {
-    display: none;
-}
-@media (min-width: 768px) {
-    .nav-submit-btn {
-        display: inline-block;
+    .mobile-submit-btn {
+        display: none;
     }
 }
 
@@ -195,7 +258,7 @@ a {
 .hero {
     background-color: var(--bg-primary);
     border-bottom: var(--border-width) solid var(--border-color);
-    padding: 4rem 0;
+    padding: 3rem 0;
 }
 
 .hero-grid {
@@ -269,6 +332,7 @@ a {
     font-weight: 800;
     font-size: 1.5rem;
     text-transform: uppercase;
+    width: max-content;
 }
 
 .marquee-content span {
@@ -277,8 +341,13 @@ a {
 
 /* SECTIONS GENERAL */
 section {
-    padding: 5rem 0;
+    padding: 3rem 0;
     border-bottom: var(--border-width) solid var(--border-color);
+}
+@media (min-width: 768px) {
+    section {
+        padding: 5rem 0;
+    }
 }
 
 .section-header {
@@ -298,6 +367,13 @@ section {
 .massive-text {
     font-size: clamp(3rem, 6vw, 5rem);
     margin-bottom: 1.5rem;
+}
+
+.stat-text {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    margin-top: 0.5rem;
 }
 
 /* MECHANICS GRID */
@@ -328,7 +404,7 @@ section {
     transform: translate(-4px, -4px);
 }
 
-.feature-card h3 {
+.feature-card h3, .feature-card h4 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     border-bottom: var(--border-width) solid var(--border-color);
@@ -351,13 +427,14 @@ section {
 .split-layout {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 4rem;
+    gap: 2rem;
     align-items: flex-start;
 }
 
 @media (min-width: 1024px) {
     .split-layout {
         grid-template-columns: 1fr 1fr;
+        gap: 4rem;
     }
 }
 
@@ -444,14 +521,29 @@ section {
 }
 
 /* FORMS & DASHBOARD */
-.dashboard-header {
-    padding: 6rem 0;
+.dashboard-header, .docs-header {
+    padding: 4rem 0;
+}
+@media (min-width: 768px) {
+    .dashboard-header, .docs-header {
+        padding: 6rem 0;
+    }
+}
+
+.dashboard-stats-section {
+    padding-bottom: 0;
+    border-bottom: none;
 }
 
 .deploy-form {
     border: var(--border-width) solid var(--border-color);
-    padding: 2.5rem;
+    padding: 1.5rem;
     background-color: var(--bg-white);
+}
+@media (min-width: 768px) {
+    .deploy-form {
+        padding: 2.5rem;
+    }
 }
 
 .form-group {
@@ -513,11 +605,11 @@ input[type="range"]::-webkit-slider-thumb {
     font-family: 'Space Grotesk', monospace;
 }
 
-/* DOCUMENTATION */
-.docs-header {
-    padding: 6rem 0;
+.active-incubations {
+    width: 100%;
 }
 
+/* DOCUMENTATION */
 .docs-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -532,12 +624,23 @@ input[type="range"]::-webkit-slider-thumb {
 
 .docs-nav ul {
     list-style: none;
-    position: sticky;
-    top: 100px;
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding-bottom: 1rem;
 }
 
-.docs-nav li {
-    margin-bottom: 0.5rem;
+@media (min-width: 1024px) {
+    .docs-nav ul {
+        display: block;
+        position: sticky;
+        top: 100px;
+        overflow-x: visible;
+        padding-bottom: 0;
+    }
+    .docs-nav li {
+        margin-bottom: 0.5rem;
+    }
 }
 
 .docs-nav a {
@@ -549,6 +652,7 @@ input[type="range"]::-webkit-slider-thumb {
     font-weight: 800;
     text-transform: uppercase;
     transition: all 0.2s;
+    white-space: nowrap;
 }
 
 .docs-nav a:hover {
@@ -561,6 +665,7 @@ input[type="range"]::-webkit-slider-thumb {
     padding-bottom: 0.5rem;
     border-bottom: var(--border-width) solid var(--border-color);
     margin-top: 3rem;
+    scroll-margin-top: 100px;
 }
 
 .docs-body h2:first-child {
@@ -580,6 +685,8 @@ input[type="range"]::-webkit-slider-thumb {
     font-family: monospace;
     overflow-x: auto;
     margin-bottom: 2rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
 /* TERMINAL */
@@ -597,7 +704,6 @@ input[type="range"]::-webkit-slider-thumb {
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
-    box-shadow: 12px 12px 0 0 var(--border-color) !important; /* Brutalist flair for terminal */
 }
 
 .terminal-header {
@@ -617,6 +723,10 @@ input[type="range"]::-webkit-slider-thumb {
     font-family: monospace;
     font-size: 1rem;
     line-height: 1.5;
+    max-height: 500px;
+    overflow-y: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .terminal-body p {
@@ -638,6 +748,7 @@ input[type="range"]::-webkit-slider-thumb {
     align-items: center;
     gap: 0.5rem;
     margin-top: 2rem;
+    width: 100%;
 }
 
 .terminal-input {
@@ -647,6 +758,8 @@ input[type="range"]::-webkit-slider-thumb {
     font-family: monospace;
     font-size: 1rem;
     width: 100%;
+    flex-grow: 1;
+    min-width: 0;
 }
 
 .terminal-input:focus {
