@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // --- ROUTING (Single Page Application Logic) ---
-    const navLinks = document.querySelectorAll('.main-nav a, .nav-submit-btn, .hero-actions a, .logo, .footer-links a, .docs-nav a');
     const pages = document.querySelectorAll('.page');
 
     function navigate() {
@@ -201,7 +200,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     
                     switch(val.toLowerCase()) {
                         case 'help':
-                            response.textContent = "> AVAILABLE COMMANDS: status, nodes, clear, hack";
+                            response.textContent = "> AVAILABLE COMMANDS: status, nodes, clear, hack, deploy";
                             break;
                         case 'status':
                             response.textContent = "> SYSTEM OPTIMAL. META SHIFT IMMINENT.";
@@ -217,6 +216,10 @@ document.addEventListener("DOMContentLoaded", () => {
                             response.textContent = "> ACCESS DENIED. INITIATING COUNTERMEASURES.";
                             response.style.color = 'red';
                             response.classList.remove('success');
+                            break;
+                        case 'deploy':
+                        case 'github':
+                            response.textContent = "> COMMITTING CHANGES... PUSHING TO GITHUB ORIGIN MAIN... DEPLOYMENT READY.";
                             break;
                         default:
                             response.textContent = "> COMMAND NOT RECOGNIZED. TYPE 'help'.";
