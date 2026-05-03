@@ -17,143 +17,265 @@
     <!-- HEADER START -->
     <header class="site-header">
         <div class="container header-inner">
-            <div class="logo">EXISTENZ.</div>
+            <a href="#home" class="logo">EXISTENZ.</a>
             <nav class="main-nav">
-                <a href="#mechanics">Mechanics</a>
-                <a href="#meta">The Meta</a>
-                <a href="#mutation">Mutation</a>
+                <a href="#home">Home</a>
+                <a href="#dashboard">Dashboard</a>
+                <a href="#docs">Documentation</a>
+                <a href="#terminal">Terminal</a>
             </nav>
-            <a href="#submit" class="btn btn-primary">Submit Payload</a>
+            <a href="#dashboard" class="btn btn-primary nav-submit-btn">Submit Payload</a>
         </div>
     </header>
     <!-- HEADER END -->
 
-    <main>
-        <!-- HERO SECTION START -->
-        <section class="hero">
-            <div class="container hero-grid">
-                <div class="hero-content">
-                    <h1 class="hero-title">
-                        <span class="block">DISPOSABLE</span>
-                        <span class="block">MUTANT</span>
-                        <span class="block">WEB TOYS.</span>
-                    </h1>
-                    <p class="hero-subtitle">The value isn't finding the next killer app. It's plugging into something weird for three minutes. Welcome to an evolutionary simulator for AI-generated code.</p>
-                    <div class="hero-actions">
-                        <a href="#arcade" class="btn btn-dark">Enter the Arcade</a>
-                        <span class="status-pill">System Active // V.3.0</span>
+    <main id="app-root">
+        <!-- PAGE: HOME START -->
+        <article id="page-home" class="page active">
+            <!-- HERO SECTION START -->
+            <section class="hero">
+                <div class="container hero-grid">
+                    <div class="hero-content">
+                        <h1 class="hero-title">
+                            <span class="block">DISPOSABLE</span>
+                            <span class="block">MUTANT</span>
+                            <span class="block">WEB TOYS.</span>
+                        </h1>
+                        <p class="hero-subtitle">The value isn't finding the next killer app. It's plugging into something weird for three minutes. Welcome to an evolutionary simulator for AI-generated code.</p>
+                        <div class="hero-actions">
+                            <a href="#dashboard" class="btn btn-dark">Enter the Arcade</a>
+                            <span class="status-pill">System Active // V.3.0</span>
+                        </div>
+                    </div>
+                    <div class="hero-media">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop" alt="Abstract digital structure">
                     </div>
                 </div>
-                <div class="hero-media">
-                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop" alt="Abstract digital structure">
+            </section>
+            <!-- HERO SECTION END -->
+
+            <!-- MARQUEE START -->
+            <div class="marquee-container">
+                <div class="marquee-content">
+                    <span>48-HOUR TTL</span> • <span>60-SECOND LOCK</span> • <span>SOCIAL VOUCHING</span> • <span>LINEAGE GRAPH</span> • <span>48-HOUR TTL</span> • <span>60-SECOND LOCK</span> • <span>SOCIAL VOUCHING</span> • <span>LINEAGE GRAPH</span> •
                 </div>
             </div>
-        </section>
-        <!-- HERO SECTION END -->
+            <!-- MARQUEE END -->
 
-        <!-- MARQUEE START -->
-        <div class="marquee-container">
-            <div class="marquee-content">
-                <span>48-HOUR TTL</span> • <span>60-SECOND LOCK</span> • <span>SOCIAL VOUCHING</span> • <span>LINEAGE GRAPH</span> • <span>48-HOUR TTL</span> • <span>60-SECOND LOCK</span> • <span>SOCIAL VOUCHING</span> • <span>LINEAGE GRAPH</span> •
-            </div>
-        </div>
-        <!-- MARQUEE END -->
+            <!-- BASELINE MECHANICS START -->
+            <section class="mechanics reveal-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>PHASE 1: THE BASELINE SYSTEM</h2>
+                        <p>Operating purely on the mechanics of social vouching and iframe interaction.</p>
+                    </div>
+                    
+                    <div class="features-grid">
+                        <article class="feature-card bg-accent-2">
+                            <h3>01. The Payload</h3>
+                            <p>Drop a URL into the dashboard. We seal it in an Incubation link. You have exactly 48 hours. If it doesn't graduate, it is wiped from the active database entirely.</p>
+                        </article>
+                        <article class="feature-card bg-accent-1">
+                            <h3>02. The Vouch</h3>
+                            <p>Reviewers are locked into a 60-second iframe session. After a minute, they answer one binary question: Functional or Broken? Three unique positive nodes break it out.</p>
+                        </article>
+                        <article class="feature-card bg-accent-3">
+                            <h3>03. The Grid</h3>
+                            <p>Graduated apps enter the public grid. Users jump in instantly. Public voting acts as a Keep Alive mechanism, adding fractions of time to the app's total lifespan.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <!-- BASELINE MECHANICS END -->
 
-        <!-- BASELINE MECHANICS START -->
-        <section id="mechanics" class="mechanics reveal-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>PHASE 1: THE BASELINE SYSTEM</h2>
-                    <p>Operating purely on the mechanics of social vouching and iframe interaction.</p>
-                </div>
-                
-                <div class="features-grid">
-                    <article class="feature-card bg-accent-2">
-                        <h3>01. The Payload</h3>
-                        <p>Drop a URL into the dashboard. We seal it in an Incubation link. You have exactly 48 hours. If it doesn't graduate, it is wiped from the active database entirely.</p>
-                    </article>
-                    <article class="feature-card bg-accent-1">
-                        <h3>02. The Vouch</h3>
-                        <p>Reviewers are locked into a 60-second iframe session. After a minute, they answer one binary question: Functional or Broken? Three unique positive nodes break it out.</p>
-                    </article>
-                    <article class="feature-card bg-accent-3">
-                        <h3>03. The Grid</h3>
-                        <p>Graduated apps enter the public grid. Users jump in instantly. Public voting acts as a Keep Alive mechanism, adding fractions of time to the app's total lifespan.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-        <!-- BASELINE MECHANICS END -->
+            <!-- MEDIA DIVIDER START -->
+            <section class="media-divider reveal-section">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2000&auto=format&fit=crop" alt="Cybernetic interface concept">
+            </section>
+            <!-- MEDIA DIVIDER END -->
 
-        <!-- MEDIA DIVIDER START -->
-        <section class="media-divider reveal-section">
-            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2000&auto=format&fit=crop" alt="Cybernetic interface concept">
-        </section>
-        <!-- MEDIA DIVIDER END -->
+            <!-- THE META START -->
+            <section class="meta-system reveal-section bg-primary">
+                <div class="container split-layout">
+                    <div class="split-text">
+                        <h2>PHASE 2: RETHINK & OPTIMIZE</h2>
+                        <p class="large-text">A chronological feed stagnates. Existenz is not an infinite archive. It is a shifting, volatile meta.</p>
+                        <ul class="data-list">
+                            <li>
+                                <strong>The Standard Rotation</strong>
+                                <span>Apps have a max lifespan. Eventually, they rotate out into a read-only archive. The front page reflects this week, not legacy code.</span>
+                            </li>
+                            <li>
+                                <strong>Asymmetric Vouching</strong>
+                                <span>Bribe your network. Attach a bounty of internal 'Cycles' to your incubation link. The first three to endure the lock and QA test it split the bounty.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="split-media">
+                         <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1000&auto=format&fit=crop" alt="Matrix of code blocks">
+                    </div>
+                </div>
+            </section>
+            <!-- THE META END -->
 
-        <!-- THE META START -->
-        <section id="meta" class="meta-system reveal-section bg-primary">
-            <div class="container split-layout">
-                <div class="split-text">
-                    <h2>PHASE 2: RETHINK & OPTIMIZE</h2>
-                    <p class="large-text">A chronological feed stagnates. Existenz is not an infinite archive. It is a shifting, volatile meta.</p>
-                    <ul class="data-list">
-                        <li>
-                            <strong>The Standard Rotation</strong>
-                            <span>Apps have a max lifespan. Eventually, they rotate out into a read-only archive. The front page reflects this week, not legacy code.</span>
-                        </li>
-                        <li>
-                            <strong>Asymmetric Vouching</strong>
-                            <span>Bribe your network. Attach a bounty of internal 'Cycles' to your incubation link. The first three to endure the lock and QA test it split the bounty.</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="split-media">
-                     <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1000&auto=format&fit=crop" alt="Matrix of code blocks">
-                </div>
-            </div>
-        </section>
-        <!-- THE META END -->
+            <!-- MUTATION ENGINE START -->
+            <section class="mutation reveal-section bg-accent-3">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <h2>PHASE 3: THE MUTATION ENGINE</h2>
+                        <p>Treating AI outputs like static software is a flaw. Existenz is a collaborative graph network of code lineage.</p>
+                    </div>
+                    
+                    <div class="mutation-visual">
+                        <div class="node genesis">App A (Genesis)</div>
+                        <div class="path-line"></div>
+                        <div class="node mutated">App B (Mutated)</div>
+                        <div class="path-line"></div>
+                        <div class="node viral">App C (Viral Variant)</div>
+                    </div>
 
-        <!-- MUTATION ENGINE START -->
-        <section id="mutation" class="mutation reveal-section bg-accent-3">
-            <div class="container">
-                <div class="section-header text-center">
-                    <h2>PHASE 3: THE MUTATION ENGINE</h2>
-                    <p>Treating AI outputs like static software is a flaw. Existenz is a collaborative graph network of code lineage.</p>
+                    <div class="features-grid two-col">
+                        <article class="feature-card bg-white">
+                            <h3>The Open Source Mandate</h3>
+                            <p>No black-box servers. Every submitted app must be legible to the platform—a single-file HTML payload or un-minified script ready for manipulation.</p>
+                        </article>
+                        <article class="feature-card bg-white">
+                            <h3>Fork & Prompt</h3>
+                            <p>Don't just vote—Mutate. Pull the app's raw source into our in-browser IDE or prompt the onboard AI to change the physics, colors, or logic. Save to generate a new Incubation link.</p>
+                        </article>
+                    </div>
                 </div>
-                
-                <div class="mutation-visual">
-                    <div class="node genesis">App A (Genesis)</div>
-                    <div class="path-line"></div>
-                    <div class="node mutated">App B (Mutated)</div>
-                    <div class="path-line"></div>
-                    <div class="node viral">App C (Viral Variant)</div>
-                </div>
+            </section>
+            <!-- MUTATION ENGINE END -->
+        </article>
+        <!-- PAGE: HOME END -->
 
-                <div class="features-grid two-col">
-                    <article class="feature-card bg-white">
-                        <h3>The Open Source Mandate</h3>
-                        <p>No black-box servers. Every submitted app must be legible to the platform—a single-file HTML payload or un-minified script ready for manipulation.</p>
-                    </article>
-                    <article class="feature-card bg-white">
-                        <h3>Fork & Prompt</h3>
-                        <p>Don't just vote—Mutate. Pull the app's raw source into our in-browser IDE or prompt the onboard AI to change the physics, colors, or logic. Save to generate a new Incubation link.</p>
-                    </article>
+        <!-- PAGE: DASHBOARD START -->
+        <article id="page-dashboard" class="page">
+            <section class="dashboard-header bg-accent-1">
+                <div class="container">
+                    <h1 class="hero-title">
+                        <span class="block">INCUBATION</span>
+                        <span class="block">CHAMBER</span>
+                    </h1>
+                    <p class="large-text">Deploy your single-file payload into the network. Set your bounty to guarantee QA testers.</p>
                 </div>
-            </div>
-        </section>
-        <!-- MUTATION ENGINE END -->
+            </section>
+            
+            <section class="dashboard-content bg-white">
+                <div class="container split-layout">
+                    <div class="form-container">
+                        <form class="deploy-form" onsubmit="event.preventDefault(); alert('Payload sealed and submitted to Incubation.');">
+                            <div class="form-group">
+                                <label for="payload-url">Payload URL (Raw HTML/JS target)</label>
+                                <input type="url" id="payload-url" placeholder="https://your-server.com/app.html" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="app-name">Designation (App Name)</label>
+                                <input type="text" id="app-name" placeholder="e.g., Gravity_Sim_v2" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="bounty">Cycle Bounty (Network Bribe)</label>
+                                <div class="range-wrapper">
+                                    <input type="range" id="bounty" min="0" max="500" step="10" value="100">
+                                    <span class="bounty-val">100 Cycles</span>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-dark btn-large block-btn">Initialize Sequence</button>
+                        </form>
+                    </div>
+                    <div class="active-incubations">
+                        <h3>YOUR ACTIVE NODES</h3>
+                        <ul class="data-list">
+                            <li class="bg-accent-2 padding-box">
+                                <strong>Vector_Drift.html</strong>
+                                <span>Status: Waiting for Vouches (1/3)</span>
+                                <span>TTL: 34h 12m remaining</span>
+                            </li>
+                            <li class="bg-accent-3 padding-box">
+                                <strong>Neon_Synth_Mutant</strong>
+                                <span>Status: GRADUATED to Public Grid</span>
+                                <span>Lifespan: 6 days remaining</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </article>
+        <!-- PAGE: DASHBOARD END -->
 
-        <!-- CTA START -->
-        <section id="submit" class="cta-section reveal-section bg-primary">
-            <div class="container text-center">
-                <h2 class="massive-text">INITIALIZE SEQUENCE</h2>
-                <p>Submit your baseline concept. Let the network consume, test, and mutate.</p>
-                <a href="#" class="btn btn-dark btn-large">Deploy Payload to Incubation</a>
-            </div>
-        </section>
-        <!-- CTA END -->
+        <!-- PAGE: DOCS START -->
+        <article id="page-docs" class="page">
+            <section class="docs-header bg-primary">
+                <div class="container text-center">
+                    <h1 class="massive-text">DEVELOPER LOGS</h1>
+                    <p class="large-text">The architecture, the API, and the rules of engagement.</p>
+                </div>
+            </section>
+            <section class="docs-content">
+                <div class="container">
+                    <div class="docs-grid">
+                        <aside class="docs-nav">
+                            <ul>
+                                <li><a href="#docs">1. The Open Source Mandate</a></li>
+                                <li><a href="#docs">2. Submitting Payloads</a></li>
+                                <li><a href="#docs">3. Mutation Webhooks</a></li>
+                                <li><a href="#docs">4. Cycle Economy</a></li>
+                            </ul>
+                        </aside>
+                        <div class="docs-body">
+                            <h2>1. The Open Source Mandate</h2>
+                            <p>To ensure total mutability, black-box servers are strictly forbidden. All logic must reside within the client-side payload you submit. We expect either a single-file `.html` payload containing all inline scripts, or unobfuscated `.js` files that our web-IDE can parse.</p>
+                            
+                            <h2>2. Understanding TTL (Time to Live)</h2>
+                            <p>Every newly submitted app enters the database with a strict 48-hour TTL. You must secure 3 unique human nodes to vouch for its functionality within this window. If the timer reaches zero, the row is irrevocably dropped from the database. No exceptions.</p>
+                            
+                            <h2>3. Mutation Webhooks (Beta)</h2>
+                            <p>If you wish to track when other users fork and mutate your Genesis payload, you can register a webhook in your terminal settings. The payload will include the diff map and the new Incubation ID of the mutant variant.</p>
+                            <pre class="code-block">
+{
+  "event": "mutation_fork",
+  "genesis_id": "app_982bX",
+  "mutant_id": "app_114cY",
+  "timestamp": 1698745211,
+  "diff_size_kb": 4.2
+}
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+        <!-- PAGE: DOCS END -->
+
+        <!-- PAGE: TERMINAL START -->
+        <article id="page-terminal" class="page">
+            <section class="terminal-section">
+                <div class="container">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <span>existenz-core@sys:~</span>
+                        </div>
+                        <div class="terminal-body">
+                            <p>> Initiating secure connection to network matrix...</p>
+                            <p class="success">> Connection established. Access level: USER</p>
+                            <p>> tail -f /var/log/existenz/vouch_activity.log</p>
+                            <div class="log-stream">
+                                <p>[10:42:01] Node_48X vouched for payload_alpha (Functional).</p>
+                                <p>[10:42:15] TTL EXPIRED: wiping payload_zeta from database.</p>
+                                <p>[10:42:33] MUTATION DETECTED: payload_alpha -> mutant_gamma.</p>
+                                <p>[10:43:02] Node_99Y initiated 60-second iframe lock on mutant_gamma.</p>
+                                <p>[10:43:40] CYCLE TRANSFER: 33 Cycles awarded to Node_99Y (Bounty).</p>
+                            </div>
+                            <div class="terminal-input-line">
+                                <span>$</span> <input type="text" class="terminal-input" placeholder="Enter command..." autofocus>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+        <!-- PAGE: TERMINAL END -->
     </main>
 
     <!-- FOOTER START -->
@@ -164,10 +286,10 @@
                 <p>The lifecycle of disposable software.</p>
             </div>
             <div class="footer-links">
-                <a href="#">Documentation</a>
-                <a href="#">API Access</a>
-                <a href="#">System Status</a>
-                <a href="#">Terminal</a>
+                <a href="#docs">Documentation</a>
+                <a href="#docs">API Access</a>
+                <a href="#terminal">System Status</a>
+                <a href="#terminal">Terminal</a>
             </div>
         </div>
     </footer>
